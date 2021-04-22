@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_common_background"
+    tools:context=".ui.fragments.WelcomeFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/welcomeScreenLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:src="@drawable/ic_girl_boy_sitting_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvWelcomeText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Be Together,\nanytime, anywhere."
+        android:textSize="@dimen/_25ssp"
+        android:fontFamily="@font/metropolis_regular"
+       android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeScreenLogo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvWelcomeText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Lorem Ipsum Text Here"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeText1" />
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:textColor="@color/white"
+        android:text="Login"
+        android:gravity="center"
+        android:background="@drawable/pink_round_button_drawable"
+        android:fontFamily="@font/metropolis_regular"
+        android:textSize="@dimen/_13sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvCreateAccount"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/black"
+        android:fontFamily="@font/metropolis_regular"
+        android:textSize="@dimen/_13sdp"
+        android:text="Create account"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/round_white_drawable"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

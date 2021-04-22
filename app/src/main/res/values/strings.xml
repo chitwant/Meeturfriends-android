@@ -1,0 +1,64 @@
+<resources>
+    <string name="application_name">MeetUrFriends</string>
+    <string name="app_ad_id">ca-app-pub-8787848622927672~1009868102</string>
+    <string name="agora_app_id">56cea7f170254a959e39e125dc8d2ba6</string>
+    <!--    <string name="agora_app_id">cadd0a9405794074b4185d4f80c593f9</string>-->
+    <string name="app_unit_id">ca-app-pub-8787848622927672/2842871670</string>
+    <!--    <string name="app_unit_id">ca-app-pub-8787848622927672/1939806390</string>-->
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_message">Message</string>
+    <string name="title_challenge">My Challenge</string>
+    <string name="title_more">More</string>
+    <string name="failure_time_out_error">Request time out!</string>
+    <string name="failure_something_went_wrong">Something went wrong please try again later!</string>
+    <string name="failure_server_not_responding">Oops! looks like we are having internal problems. Please try again later.</string>
+    <string name="failure_internet_connection">Internet connection appears to be offline. Please check your network settings.</string>
+    <string name="enter_message">Enter message</string>
+    <string name="my_notifications">My Notifications</string>
+    <string name="crash_dialog_title">Meet Friend is crashed</string>
+    <string name="crash_dialog_text">An unexpected error occurred forcing the
+    application to stop. Want to send the report to the developer ?</string>
+    <string name="places_api_key">AIzaSyDzV2g2kCB63QGUZP98zJLo62UyLYoLbZc</string>
+    <string name="say_something_about_this">Say something about this...</string>
+    <string name="no_comments_yet_nbe_the_first_to_comment">No Comments Yet\nBe the first to comment.</string>
+    <string name="menu_gift">Gift Gallery</string>
+    <string name="menu_earning">Earning Account</string>
+    <string name="menu_setting">Settings</string>
+    <string name="menu_logout">Logout</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
+    <string name="last_seen">Last Seen</string>
+    <string-array name="post_privacy_array">
+        <item>Public</item>
+        <item>Friends</item>
+        <item>FOF</item>
+    </string-array>
+
+    <string name="server_error_error">Server Error Occurs</string>
+    <string name="err_file_not_found">Unable to get the file.</string>
+    <string name="err_illegal_arguement">Illegal Argument Found</string>
+    <string name="err_null_pointer">Some null values found.</string>
+    <string name="err_ip_address">Please verify server ip address.</string>
+    <string name="err_internet_conn">Unable to connect to internet, Please try again...</string>
+    <string name="err_no_route">No Route</string>
+    <string name="err_timeout">Timeout connection occurs.</string>
+    <string name="err_unknown_exception">Some Unknown Exception occured, Please try again...</string>
+    <string name="hint_alert">Alert</string>
+    <string name="err_view_must_attach">View must be attached to ErrorHandler</string>
+    <string name="not_modified_error">Not Modified Error</string>
+    <string name="bad_request_error">Bad Request Error</string>
+    <string name="unauthorized_error">UnAuthorized Error</string>
+    <string name="forbidden_error">Forbidden Error</string>
+    <string name="not_found_error">Url Not Found Error</string>
+    <string name="method_not_allowed_error">Method Not Allowed Error</string>
+    <string name="conflict_error">Conflict error</string>
+    <string name="unprocessable_error">UnProcessableError</string>
+</resources>

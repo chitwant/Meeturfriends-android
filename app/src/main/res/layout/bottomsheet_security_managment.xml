@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:background="@color/white"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/tvlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:fontFamily="@font/metropolis_bold"
+        android:paddingTop="@dimen/_10sdp"
+        android:text="Where are you logged in"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvlabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+android:fontFamily="@font/metropolis_regular"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/textColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvlabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvlabel" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lytCotainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvlabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvlabel1">
+
+        <ImageView
+            android:id="@+id/ivDevice"
+            android:layout_width="42dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_device_unknown_black_24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/metropolis_semibold"
+            android:maxLines="3"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="jgldjgd"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/ivDevice"
+            app:layout_constraintStart_toEndOf="@+id/ivDevice"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDeviceLastTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/metropolis_regular"
+            android:text="created"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/textColor"
+            app:layout_constraintLeft_toRightOf="@+id/ivDevice"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvDeleteDevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:background="@color/app_blue"
+        android:fontFamily="@font/metropolis_regular"
+        android:gravity="center"
+        android:paddingTop="@dimen/_10sdp"
+        android:textSize="@dimen/_13sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:text="Delete"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lytCotainer" />
+</androidx.constraintlayout.widget.ConstraintLayout>

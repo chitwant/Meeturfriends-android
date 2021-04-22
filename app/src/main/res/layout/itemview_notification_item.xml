@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lytCotainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_user_profile_pic_new"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/metropolis_regular"
+        android:gravity="start"
+        android:text="jgldjgd"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toStartOf="@+id/ivTrashIcon"
+        app:layout_constraintLeft_toRightOf="@+id/ivUserImage"
+        app:layout_constraintStart_toStartOf="@+id/tvDeviceLastTime"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDeviceLastTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/metropolis_regular"
+        android:text="Time"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/textColor"
+        app:layout_constraintLeft_toRightOf="@+id/ivUserImage"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <ImageView
+        android:id="@+id/ivTrashIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_trash"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/mAd"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivUserImage"
+        android:orientation="vertical" >
+        <LinearLayout
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/mAdView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="LARGE_BANNER"
+                ads:adUnitId="@string/app_unit_id" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

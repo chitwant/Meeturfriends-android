@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayoutParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    android:keepScreenOn="true"
+    android:minHeight="@dimen/size_two_hundred">
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/simpleExoPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:controller_layout_id="@layout/exo_playback_control_view"
+        app:player_layout_id="@layout/exo_simple_player_view"
+        app:resize_mode="fixed_width" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="@dimen/size_forty"
+        android:layout_height="@dimen/size_forty"
+        android:layout_gravity="center"
+        android:background="@drawable/drawable_rounded_transparent_with_stroke"
+        android:padding="@dimen/size_ten"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewVolume"
+        android:layout_width="@dimen/size_thirty_five"
+        android:layout_height="@dimen/size_thirty_five"
+        android:layout_margin="@dimen/size_ten"
+        android:background="@drawable/drawable_rounded_transparent"
+        android:padding="@dimen/size_ten"
+        android:src="@drawable/drawable_volume_selector"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

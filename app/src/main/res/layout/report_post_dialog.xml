@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activityHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/headerAppLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/metropolis_semibold"
+            android:text="Report"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/headersubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/metropolis_semibold"
+            android:text="Please select a problem to continue"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerAppLogo" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_24sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/close_icon_grey"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvNudity"
+            style="@style/textstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nudity" />
+
+        <TextView
+            android:id="@+id/tvViolence"
+            style="@style/textstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:text="Violence" />
+
+        <TextView
+            android:id="@+id/tvSpam"
+            style="@style/textstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:text="Spam" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvFake"
+            style="@style/textstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fake News" />
+
+        <TextView
+            android:id="@+id/tvHarrasment"
+            style="@style/textstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:text="Harrasment" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvhate"
+            style="@style/textstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Hate Speech" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSuicide"
+            style="@style/textstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suicide or self injury" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTerrorism"
+            style="@style/textstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terrorism"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvOther"
+            style="@style/textstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:text="Something else" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/_15ssp"
+        android:layout_toLeftOf="@id/ivSendMessage"
+        android:fontFamily="@font/metropolis_regular"
+        android:hint="Some reason"
+        android:imeOptions="actionDone"
+        android:inputType="textEmailAddress"
+
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_11ssp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvSendReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/metropolis_regular"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="gone" />
+</LinearLayout>

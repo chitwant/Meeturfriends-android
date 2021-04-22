@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activityHeader"
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize"
+                android:background="@drawable/header_gradient"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivBackIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_white_arrow_back_"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/headerAppLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_meet_friend_logo_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/ivBackIcon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivSearchIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_search_icon_white"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/mMainLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ivUserPicture"
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:src="@drawable/ic_user_picture" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvUsername"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:text="kafhdkj "
+                                    android:fontFamily="@font/metropolis_semibold"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/tvPostTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="afhfks"
+                                    android:fontFamily="@font/metropolis_regular"
+                                    android:textSize="@dimen/_9ssp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvPostTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:ellipsize="marquee"
+                            android:maxLines="4"
+                            android:fontFamily="@font/metropolis_semibold"
+
+                            android:text="sfdgd"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp" />
+
+                        <TextView
+                            android:id="@+id/tvPostDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:maxLines="4"
+                            android:text="dfjdshfkj"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@font/metropolis_regular"
+                                android:maxLines="4"
+                                android:text="Start: "
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <TextView
+                                android:id="@+id/tvStartDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@font/metropolis_regular"
+                                android:maxLines="4"
+                                android:text="fdfdfd"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@font/metropolis_regular"
+                                android:maxLines="4"
+                                android:text="End: "
+                                android:textColor="@color/textColor"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <TextView
+                                android:id="@+id/tvEndDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@font/metropolis_regular"
+                                android:maxLines="4"
+                                android:text="fdfdfd"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvStartDate" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvTimeLeft"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:maxLines="4"
+
+                            android:text="7 days left"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvEndDate" />
+
+                        <TextView
+                            android:id="@+id/tvChllngeCntry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:maxLines="4"
+                            android:text="All"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvTimeLeft" />
+
+                        <TextView
+                            android:id="@+id/tvChllngetimezone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:maxLines="4"
+                            android:text="Note: Please fsdhk"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvChllngeCntry" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/post_height"
+                        android:layout_marginStart="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_13sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/black_outline"
+                        android:padding="7dp">
+
+                        <ImageView
+                            android:id="@+id/ivChallenge"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/post_height"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/image_placeholder" />
+
+                        <ImageView
+                            android:id="@+id/ivVideoIcon"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_play_icon_video"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="#20000000"
+                        android:fontFamily="@font/metropolis_bold"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Challenge Replies"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ivChallenge" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:id="@+id/mBottomView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mAccept"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/outline_green"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:gravity="center"
+                   android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Accept"
+                    android:textColor="@color/textColor_Green"
+                    android:textSize="@dimen/_13sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mReject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/outline_red"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="Reject"
+                    android:textColor="@color/textColor_red"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

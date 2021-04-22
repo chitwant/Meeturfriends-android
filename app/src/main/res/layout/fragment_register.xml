@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_common_background"
+    tools:context=".ui.fragments.LoginFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/loginHeader"
+                layout="@layout/header_before_login_screens" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/loginHeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registration"
+                android:fontFamily="@font/metropolis_semibold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/loginHeader" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="First Name"
+                app:layout_constraintTop_toBottomOf="@id/loginHeaderText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFirstName"
+                    android:layout_width="match_parent"
+                    android:paddingTop="1dp"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldLastname"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"   android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="Last name"
+                app:layout_constraintTop_toBottomOf="@id/textFieldName"
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLastName"
+                    android:layout_width="match_parent"
+                    android:paddingTop="1dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"     android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldEmailPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp" android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="Email/Phone"
+                app:layout_constraintTop_toBottomOf="@id/textFieldLastname"
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmailPhone"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"     android:paddingTop="1dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldDateOfBirth"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"   android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="Date of Birth"
+                app:layout_constraintTop_toBottomOf="@id/textFieldEmailPhone"
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDateOfBirth"
+                    android:layout_width="match_parent"
+                    android:paddingTop="1dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"       android:clickable="true"
+                    android:focusable="false"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvGenderLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Gender"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldDateOfBirth" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvGenderLabel">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_11sdp"       android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_11sdp"      android:layout_height="wrap_content"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/radioOther"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_11sdp"      android:layout_height="wrap_content"
+                    android:text="Other" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"      android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="Password"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupGender"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"          android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:paddingTop="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"      android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="Confirm Password"
+                app:layout_constraintTop_toBottomOf="@id/textFieldPassword"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"          android:paddingTop="0dp"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/checkboxTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"      android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldConfirmPassword" />
+
+            <TextView
+                android:id="@+id/tvTermsAndConditions"
+                app:layout_constraintLeft_toRightOf="@+id/checkboxTerms"
+                app:layout_constraintTop_toTopOf="@+id/checkboxTerms"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"     app:layout_constraintBottom_toBottomOf="@+id/checkboxTerms"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="I agree to terms &amp; conditions policies"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"      android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/pink_round_button_drawable"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Register"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxTerms" />
+
+            <LinearLayout
+                android:id="@+id/signupLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLogin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already have an account?"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvLogin" />
+
+                <TextView
+                    android:id="@+id/tvLoginButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Log in"
+                    android:textColor="@color/app_pink"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvLogin" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/loginBottomLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/ic_girl_boy_sitting_logo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signupLayout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

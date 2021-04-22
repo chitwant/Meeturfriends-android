@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize"
+                android:background="@drawable/header_gradient"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivBackIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_white_arrow_back_" />
+
+                <ImageView
+                    android:id="@+id/headerAppLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/ivBackIcon"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_meet_friend_logo_white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:adjustViewBounds="true"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:gravity="center_vertical"
+                    android:text="Edit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+
+            </RelativeLayout>
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15sdp">
+
+                    <LinearLayout
+                        android:id="@+id/mCommonView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:text="Email"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/mEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/metropolis_regular"
+                                android:text="Country Code"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/metropolis_regular"
+                                android:text="(Eg.- +1)"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/mCountryCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLength="5"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:text="Phone Number"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/mPhoneNumber"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLines="12"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:text="Bank Name"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/mBankName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:text="Account Holder Name"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/mUserName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/metropolis_regular"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                    <TextView
+                        android:id="@+id/mSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                      android:fontFamily="@font/metropolis_regular"  android:layout_marginRight="@dimen/_30sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@color/app_blue"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:text="Submit"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

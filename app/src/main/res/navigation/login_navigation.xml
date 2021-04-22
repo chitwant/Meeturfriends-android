@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.meetfriend.app.ui.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_welcomeFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/splashFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/splashFragment"
+            android:id="@+id/action_splashFragment_to_editProfileInfoFragment"
+            app:destination="@id/editProfileInfoFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.meetfriend.app.ui.fragments.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_verifyOtpFragment"
+            app:destination="@id/verifyOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.meetfriend.app.ui.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_editProfileInfoFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/editProfileInfoFragment"
+            app:destination="@id/editProfileInfoFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_verifyOtpFragment"
+            app:destination="@id/verifyOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.meetfriend.app.ui.fragments.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_editProfileInfoFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/editProfileInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.meetfriend.app.ui.fragments.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment" />
+    <fragment
+        android:id="@+id/verifyOtpFragment"
+        android:name="com.meetfriend.app.ui.fragments.VerifyOtpFragment"
+        android:label="fragment_verify_otp"
+        tools:layout="@layout/fragment_verify_otp">
+        <action
+            android:id="@+id/action_verifyOtpFragment_to_registerFragment"
+            app:popUpTo="@id/verifyOtpFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.meetfriend.app.ui.activities.HomeActivity"
+        android:label="HomeActivity" />
+    <fragment
+        android:id="@+id/editProfileInfoFragment"
+        android:name="com.meetfriend.app.ui.fragments.EditProfileInfoFragment"
+        android:label="EditProfileInfoFragment">
+        <action
+            android:id="@+id/action_editProfileInfoFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+</navigation>

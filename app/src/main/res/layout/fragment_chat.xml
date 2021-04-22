@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.fragments.profile.ChatFragment">
+
+        <RelativeLayout
+            android:id="@+id/rlOuter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/llBottom"
+                android:layout_weight="1"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                tools:ignore="UnusedAttribute" />
+
+            <LinearLayout
+                android:id="@+id/llBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/light_grey"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_7sdp">
+
+                <EditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_gray_border"
+                    android:hint="Type Here"
+                    android:inputType="text"
+                    android:maxLines="3"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/_12sdp"
+                    tools:ignore="Autofill" />
+
+                <ImageView
+                    android:id="@+id/mAttachment"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_baseline_attach_file_24" />
+
+                <ImageView
+                    android:id="@+id/ivSend"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_send" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_20sdp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserPicture"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/ic_user_picture"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:fontFamily="@font/metropolis_regular"
+        android:textColor="@color/black"
+
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintLeft_toRightOf="@+id/ivUserPicture"
+        app:layout_constraintTop_toTopOf="@id/ivUserPicture" />
+
+    <Spinner
+        android:id="@+id/postPrivacySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/post_privacy_array"
+        android:gravity="left"
+        android:padding="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/ivUserPicture"
+        app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
+
+    <EditText
+        android:id="@+id/etStoryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/metropolis_regular"
+        android:gravity="start"
+        android:hint="@string/say_something_about_this"
+        android:maxHeight="@dimen/_300sdp"
+        android:minHeight="@dimen/_100sdp"
+        android:padding="@dimen/_5sdp"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintTop_toBottomOf="@id/postPrivacySpinner" />
+
+    <TextView
+        android:id="@+id/tvPostStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/round_button_drawable"
+        android:fontFamily="@font/metropolis_regular"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:text="SHARE"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etStoryText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

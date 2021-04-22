@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_38sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mUserImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:src="@drawable/ic_user_profile_pic_new" />
+
+        <ImageView
+            android:id="@+id/mOnline"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:layout_alignBottom="@id/mUserImage"
+            android:layout_alignEnd="@id/mUserImage"
+            android:src="@drawable/green_button_round" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@id/mUserImage"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/metropolis_regular"
+            android:gravity="center"
+            android:maxLines="2"
+            android:ellipsize="marquee"
+            android:paddingStart="@dimen/_3sdp"
+            android:paddingEnd="@dimen/_3sdp"
+            android:text="dsf"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_9sdp" />
+
+    </RelativeLayout>
+</layout>

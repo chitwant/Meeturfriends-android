@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey_background"
+    >
+
+    <RelativeLayout
+        android:id="@+id/lytHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/header_gradient"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/headerLoginBackButton"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_white_arrow_back_" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/headerLoginBackButton"
+            android:src="@drawable/ic_meet_friend_logo_white" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/tvDeleteAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:fontFamily="@font/metropolis_semibold"
+            android:textColor="@color/textColor"
+            android:theme="@style/locationSwitch"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/metropolis_regular"
+        android:text="Where are you logged in"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_13ssp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lytHeader" />
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <com.meetfriend.app.utilclasses.RecyclerViewEmptySupport
+           android:id="@+id/securityRV"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@color/grey_background"
+            />
+
+       <TextView
+           android:id="@+id/tvNoSecurity"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="No Device yet"
+           android:layout_centerInParent="true"
+           android:textSize="@dimen/_13ssp"
+           android:textColor="@color/textColor"
+           android:fontFamily="@font/metropolis_regular"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+   </RelativeLayout>
+</LinearLayout>

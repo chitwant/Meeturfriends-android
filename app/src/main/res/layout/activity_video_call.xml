@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_video_chat_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context="io.agora.tutorials1v1vcall.VideoChatViewActivity">
+
+        <ImageView
+            android:id="@+id/mBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/remote_video_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/remoteBackground">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mRinging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/metropolis_bold"
+                android:text="Ringing..."
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/local_video_view_container"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@color/localBackground"
+            android:onClick="onLocalContainerClick">
+
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mMuteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/metropolis_regular"
+            android:text="User mute the call"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/mButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/metropolis_bold"
+                android:text="Jhon Smith"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/metropolis_bold"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mChangeCam"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/round_white_drawable"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_flip" />
+
+                <ImageView
+                    android:id="@+id/mMute"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/round_white_drawable"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_unmute" />
+
+
+                <ImageView
+                    android:id="@+id/mVideo"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/round_white_drawable"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_hide_video" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/mCall"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:background="@drawable/round_app_color"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_cut_call" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

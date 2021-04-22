@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/publics"
+        android:title="Public"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/friend"
+        android:title="Friends"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/fof"
+        android:title="FOF"
+        app:showAsAction="never"/>
+</menu>

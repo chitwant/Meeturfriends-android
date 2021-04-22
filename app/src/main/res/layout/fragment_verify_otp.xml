@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.VerifyOtpFragment">
+
+    <include
+        android:id="@+id/loginHeader"
+        layout="@layout/header_before_login_screens" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/loginHeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Phone Number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20ssp"
+        android:fontFamily="@font/metropolis_regular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginHeader" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_textSize="@dimen/_13sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginHeaderText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/metropolis_regular"
+        android:textSize="@dimen/_13sdp"   android:layout_marginRight="@dimen/_10sdp"
+        android:hint="Enter Phone Number"
+        app:layout_constraintLeft_toRightOf="@+id/ccp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginHeaderText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:paddingTop="1dp"
+            android:fontFamily="@font/metropolis_regular"
+            android:textSize="@dimen/_13sdp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="phone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvSendOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/pink_round_button_drawable"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="Send OTP"
+        android:textColor="@color/white"
+        android:fontFamily="@font/metropolis_regular"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldPhone" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:fontFamily="@font/metropolis_regular"
+        android:textSize="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:hint="Enter OTP"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/loginHeaderText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etOtp"
+            android:fontFamily="@font/metropolis_regular"
+            android:textSize="@dimen/_13sdp"     android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="phone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvVerifyOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/pink_round_button_drawable"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="Verify"
+        android:textColor="@color/white"
+        android:fontFamily="@font/metropolis_regular"
+        android:textSize="@dimen/_13sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldOtp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textResendOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Resend OTP"
+        android:textColor="@color/black"
+        android:fontFamily="@font/metropolis_regular"
+        android:textSize="@dimen/_13sdp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvVerifyOtp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

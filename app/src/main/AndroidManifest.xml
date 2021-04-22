@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.meetfriend.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:name=".ApplicationClass"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/application_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:label,allowBackup">
+        <activity android:name=".ui.activities.CallLauncherActivity"
+            android:screenOrientation="portrait"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"></activity>
+        <activity android:name=".ui.activities.CallendedActivity" />
+        <activity android:name=".ui.activities.TaggedListActivity" />
+        <activity
+            android:name=".ui.activities.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.SearchUserListingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.BankCountryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.TransactionHistortActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.NotificationTempActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddBankDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.CoinPlanPriceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AudioCallActivity"
+            android:screenOrientation="portrait"
+            android:showWhenLocked="true" />
+        <activity
+            android:name=".ui.activities.VideoCallActivity"
+            android:screenOrientation="portrait"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.GiftTransactionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.MyEarningActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.GiftGalleryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.LikedUserListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.WinnerDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.ChallangeDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/places_api_key" />
+
+        <activity
+            android:name=".ui.activities.VideoPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:launchMode="singleInstance"
+            android:turnScreenOn="true"
+            tools:targetApi="o_mr1" />
+        <activity
+            android:name=".ui.activities.FullScreenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.HomeActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8787848622927672~1009868102" />
+
+        <activity
+            android:name=".ui.activities.CreateChallengeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.ChallengeDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.SettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <provider
+            android:name=".utilclasses.GenericFileProvider"
+            android:authorities="${applicationId}.my.package.name.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name=".utilclasses.MyFcmListenerService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".utilclasses.ActionReceiver" />
+        <receiver android:name=".utilclasses.MyBroadcastReceiver" />
+    </application>
+
+</manifest>

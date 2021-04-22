@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEEFA">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivCoverPic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp"
+            android:clickable="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_placer_holder_image_new"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivEditCoverPic"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/edit_pic"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ivCoverPic"
+            app:layout_constraintRight_toRightOf="@id/ivCoverPic" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:clickable="false"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="@dimen/_1sdp"
+            android:src="@drawable/ic_user_profile_pic_new"
+            app:layout_constraintBottom_toBottomOf="@id/ivCoverPic"
+            app:layout_constraintLeft_toLeftOf="@id/ivCoverPic"
+            app:layout_constraintRight_toRightOf="@id/ivCoverPic"
+            app:layout_constraintTop_toBottomOf="@id/ivCoverPic" />
+
+        <ImageView
+            android:id="@+id/ivEditProfilePic"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/edit_pic"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfilePic"
+            app:layout_constraintRight_toRightOf="@id/ivProfilePic" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivProfilePic" />
+
+        <LinearLayout
+            android:id="@+id/profileTabsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tvUserName">
+
+            <TextView
+                android:id="@+id/tvAddFriend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_add_friend_icon"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Add Friend"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Friends"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/view_pager_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/profileTabsSection"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorPrimaryDark"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/colorPrimaryDark"
+            app:tabTextAppearance="@style/MyTabLayoutTextAppearance" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager_tab" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

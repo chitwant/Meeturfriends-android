@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_background">
+
+    <TextView
+        android:id="@+id/tvChallengeLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/metropolis_regular"
+        android:text="Who can see your Challenge?"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/challengLayoutLable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/white_box"
+        app:layout_constraintTop_toBottomOf="@+id/tvChallengeLable">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spnSee"
+            android:layout_width="match_parent"
+
+            android:layout_height="48dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvCountryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/metropolis_regular"
+        android:text="Country"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/challengLayoutLable" />
+
+    <RelativeLayout
+        android:id="@+id/countryLayoutLable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/white_box"
+        app:layout_constraintTop_toBottomOf="@+id/tvCountryLabel">
+
+        <TextView
+            android:id="@+id/spnCntry"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/metropolis_regular"
+            android:gravity="center|left"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_11ssp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/ic_next_arrow" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvStateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/metropolis_regular"
+        android:text="State"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countryLayoutLable" />
+
+    <RelativeLayout
+        android:id="@+id/stateLayoutLable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/white_box"
+        app:layout_constraintTop_toBottomOf="@+id/tvStateLabel">
+
+        <TextView
+            android:id="@+id/spnState"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/metropolis_regular"
+            android:gravity="center|left"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_11ssp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/ic_next_arrow" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvCityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/metropolis_regular"
+        android:text="city"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stateLayoutLable" />
+
+    <RelativeLayout
+        android:id="@+id/cityLayoutLable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/white_box"
+        app:layout_constraintTop_toBottomOf="@+id/tvCityLabel">
+
+        <TextView
+            android:id="@+id/spnCity"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/metropolis_regular"
+            android:gravity="center|left"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_11ssp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/ic_next_arrow" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvCreateChallengeNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/blue_round_button_drawable"
+        android:fontFamily="@font/metropolis_regular"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintTop_toBottomOf="@+id/cityLayoutLable" />
+</androidx.constraintlayout.widget.ConstraintLayout>

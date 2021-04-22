@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_common_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/ivEditProfile"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_margin="@dimen/_7sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/edit_profile_icon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/loginHeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Update Info"
+                android:fontFamily="@font/metropolis_semibold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18ssp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivEditProfile" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"     android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="First Name"
+                app:layout_constraintTop_toBottomOf="@id/loginHeaderText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+               android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingTop="1dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldLastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"     android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="Last name"
+                app:layout_constraintTop_toBottomOf="@id/textFieldName"
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"        android:focusable="false"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingTop="1dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"    android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="Current City"
+                app:layout_constraintTop_toBottomOf="@id/textFieldLastname"
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"    android:focusable="false"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingTop="1dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"    android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="Education"
+                app:layout_constraintTop_toBottomOf="@id/textFieldCity"
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEducation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"     android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingTop="1dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldWork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"  android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="Work"
+                app:layout_constraintTop_toBottomOf="@id/textFieldEducation"
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etWork"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"        android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingTop="1dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvGenderLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Gender"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldWork" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:clickable="false"
+                android:focusable="false"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvGenderLabel">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_11sdp"     android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_11sdp"      android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/radioOther"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_11sdp"   android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="Other" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"  android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="Date Of Birth"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupGender"
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"      android:clickable="false"
+                    android:focusable="false"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingTop="1dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvRelationshipLabel"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"  android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Relationship Status"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldDOB" />
+
+            <RadioGroup
+                android:id="@+id/radioRelationShip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:clickable="false"
+                android:focusable="false"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRelationshipLabel">
+
+                <RadioButton
+                    android:id="@+id/radioSingle"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_11sdp"    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="Single" />
+
+                <RadioButton
+                    android:id="@+id/radioMarried"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_11sdp"     android:enabled="false"
+                    android:text="Married" />
+
+                <RadioButton
+                    android:id="@+id/radioUnmarried"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_11sdp"         android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="Unmarried" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldHobbies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"     android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:hint="Hobbies"
+                app:layout_constraintTop_toBottomOf="@id/radioRelationShip"
+                app:passwordToggleEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etHobbies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:fontFamily="@font/metropolis_regular"
+                    android:textSize="@dimen/_13sdp"         android:focusable="false"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:paddingTop="1dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvUpdateInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_regular"
+                android:textSize="@dimen/_13sdp"     android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/pink_round_button_drawable"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Update"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldHobbies" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

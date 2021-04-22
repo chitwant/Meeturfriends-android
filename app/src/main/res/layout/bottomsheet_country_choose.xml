@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/lytHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_gradient"
+        android:padding="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/headerLoginBackButton"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_white_arrow_back_" />
+
+        <TextView
+            android:id="@+id/tvChallengeLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/headerLoginBackButton"
+            android:fontFamily="@font/metropolis_bold"
+            android:text="Country"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp" />
+
+
+        <TextView
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/metropolis_semibold"
+            android:text="Done"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_badge"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/lytHeader"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp"
+        android:background="@drawable/edittext_back"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@null" />
+
+    <RelativeLayout
+        android:id="@+id/layoutctgry"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:layout_below="@+id/search_badge"
+        android:background="@color/white"
+        android:gravity="center|left">
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/checkBox"
+            android:fontFamily="@font/metropolis_regular"
+            android:gravity="center|left"
+            android:text="All"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/metropolis_regular"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="center|left"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+    <com.meetfriend.app.utilclasses.RecyclerViewEmptySupport
+        android:id="@+id/recyclerviewCntry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutctgry" />
+    <!--
+        <TextView
+            android:id="@+id/tvNoPhotos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Countries"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+</RelativeLayout>

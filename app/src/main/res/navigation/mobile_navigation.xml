@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.meetfriend.app.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_addStoryPostFragment"
+            app:destination="@id/addStoryPostFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_navigation_home_fragment_to_postDetailsFragment"
+            app:destination="@id/postDetailsFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_editPostFragment"
+            app:destination="@id/editPostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.meetfriend.app.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.meetfriend.app.ui.fragments.settings.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/addStoryPostFragment"
+        android:name="com.meetfriend.app.ui.fragments.AddStoryPostFragment"
+        android:label="fragment_add_story_post"
+        tools:layout="@layout/fragment_add_story_post" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.meetfriend.app.ui.fragments.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile_new">
+        <action
+            android:id="@+id/action_profileFragment_to_editPostFragment"
+            app:destination="@id/editPostFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_postDetailsFragment"
+            app:destination="@id/postDetailsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editPostFragment2"
+            app:destination="@id/editPostFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileInfoFragment2"
+            app:destination="@id/editProfileInfoFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_more"
+        android:name="com.meetfriend.app.ui.fragments.MoreFragment"
+        android:label="MoreFragment">
+        <action
+            android:id="@+id/action_navigation_more_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_navigation_more_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+        <action
+            android:id="@+id/action_navigation_more_to_friendRequestFragment"
+            app:destination="@id/friendRequestFragment" />
+        <action
+            android:id="@+id/action_navigation_more_to_friendSuggestionsFragment"
+            app:destination="@id/friendSuggestionsFragment" />
+        <action
+            android:id="@+id/action_navigation_more_to_savedPostsFragment"
+            app:destination="@id/savedPostsFragment" />
+        <action
+            android:id="@+id/action_navigation_more_to_postDetailsFragment"
+            app:destination="@id/postDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.meetfriend.app.ui.fragments.ResetPasswordFragment"
+        android:label="ResetPasswordFragment" />
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="com.meetfriend.app.ui.fragments.profile.PostsFragment"
+        android:label="fragment_posts"
+        tools:layout="@layout/fragment_posts">
+
+    </fragment>
+    <fragment
+        android:id="@+id/editPostFragment"
+        android:name="com.meetfriend.app.ui.fragments.EditPostFragment"
+        android:label="EditPostFragment" />
+    <fragment
+        android:id="@+id/navigation_mychallenge"
+        android:name="com.meetfriend.app.ui.fragments.ChallengesFragment"
+        android:label="ChallengesFragment">
+        <action
+            android:id="@+id/action_mychallenge_to_adminchallengeFragment"
+            app:destination="@id/adminChallengeFragment" />
+        <action
+            android:id="@+id/action_mychallenge_to_publicchallengeFragment"
+            app:destination="@id/publicChallengeFragment" />
+        <action
+            android:id="@+id/action_mychallenge_to_challengeListDoneFragment"
+            app:destination="@id/challengeListFragment" />
+        <action
+            android:id="@+id/action_mychallenge_to_mychallengeFragment"
+            app:destination="@id/myChallengeFragment" />
+        <action
+            android:id="@+id/action_mychallenge_to_livechallengeFragment"
+            app:destination="@id/liveChallengeFragment" />
+        <action
+            android:id="@+id/action_mychallenge_to_winnerchallengeFragment"
+            app:destination="@id/WinnerChallengeFragment" />
+        <action
+            android:id="@+id/action_mychallenge_to_challengeDetailsFragment"
+            app:destination="@id/ChallengeDetailsFragment" />
+        <action
+            android:id="@+id/action_mychallenge_to_challengeAcceptPostFragment"
+            app:destination="@id/ChallengeAcceptPostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminChallengeFragment"
+        android:name="com.meetfriend.app.ui.fragments.challenge.CountryChooseFragment"
+        android:label="fragment_admin_challenge"
+        tools:layout="@layout/fragment_admin_challenge" />
+    <fragment
+        android:id="@+id/publicChallengeFragment"
+        android:name="com.meetfriend.app.ui.fragments.challenge.PublicChallengeFragment"
+        android:label="fragment_public_challenge"
+        tools:layout="@layout/fragment_public_challenge" />
+    <fragment
+        android:id="@+id/myChallengeFragment"
+        android:name="com.meetfriend.app.ui.fragments.challenge.MyChallengeFragment"
+        android:label="fragment_my_challenge"
+        tools:layout="@layout/fragment_my_challenge">
+        <action
+            android:id="@+id/action_myChallengeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/challengeListFragment"
+        android:name="com.meetfriend.app.ui.fragments.challenge.ChallengeListDoneFragment"
+        android:label="fragment_list_challenge"
+        tools:layout="@layout/fragment_challengelist">
+        <action
+            android:id="@+id/action_myChallengelistFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/liveChallengeFragment"
+        android:name="com.meetfriend.app.ui.fragments.challenge.LiveChallengeFragment"
+        android:label="fragment_live_challenge"
+        tools:layout="@layout/fragment_live_challenge">
+        <action
+            android:id="@+id/action_navigation_liveChallengeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/WinnerChallengeFragment"
+        android:name="com.meetfriend.app.ui.fragments.challenge.WinnerChallengeFragment"
+        android:label="fragment_winner_challenge"
+        tools:layout="@layout/fragment_winner_challenge">
+        <action
+            android:id="@+id/action_navigation_WinnerChallengeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ChallengeDetailsFragment"
+        android:name="com.meetfriend.app.ui.activities.ChallengeDetailActivity"
+        android:label="fragment_detail_challenge"
+        tools:layout="@layout/fragment_challenge_details" />
+    <fragment
+        android:id="@+id/ChallengeAcceptPostFragment"
+        android:name="com.meetfriend.app.ui.fragments.challenge.ChallengeAcceptPostFragment"
+        android:label="fragment_challengeaccept_challenge"
+        tools:layout="@layout/fragment_challengeaccept_post" />
+    <fragment
+        android:id="@+id/friendRequestFragment"
+        android:name="com.meetfriend.app.ui.fragments.FriendRequestFragment"
+        android:label="fragment_friend_request"
+        tools:layout="@layout/fragment_friend_request" />
+    <fragment
+        android:id="@+id/postDetailsFragment"
+        android:name="com.meetfriend.app.ui.fragments.PostDetailsFragment"
+        android:label="fragment_post_details"
+        tools:layout="@layout/fragment_post_details" />
+    <fragment
+        android:id="@+id/friendSuggestionsFragment"
+        android:name="com.meetfriend.app.ui.fragments.FriendSuggestionsFragment"
+        android:label="fragment_friend_suggestions"
+        tools:layout="@layout/fragment_friend_suggestions">
+        <action
+            android:id="@+id/action_friendSuggestionsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_friend"
+        android:name="com.meetfriend.app.ui.fragments.FriendsFragment"
+        android:label="fragment_friends"
+        tools:layout="@layout/fragment_friends">
+        <action
+            android:id="@+id/action_navigation_friend_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="com.meetfriend.app.ui.activities.MessageFragment"
+        android:label="fragment_friends"
+        tools:layout="@layout/fragment_messages">
+
+    </fragment>
+    <fragment
+        android:id="@+id/savedPostsFragment"
+        android:name="com.meetfriend.app.ui.fragments.SavedPostsFragment"
+        android:label="SavedPostsFragment">
+        <action
+            android:id="@+id/action_savedPostsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_savedPostsFragment_to_postDetailsFragment"
+            app:destination="@id/postDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileInfoFragment2"
+        android:name="com.meetfriend.app.ui.fragments.EditProfileInfoFragment"
+        android:label="EditProfileInfoFragment" />
+</navigation>
